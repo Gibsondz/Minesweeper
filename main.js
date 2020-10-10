@@ -1,6 +1,8 @@
 window.addEventListener('load', main);
 
 let timer;
+$.event.special.tap.emitTapOnTaphold = false;
+
 
 /**
  * creates enough cards for largest board (22x22)
@@ -24,11 +26,11 @@ function prepare_dom(game) {
       event.preventDefault();
     });
 
+    $(card).off("taphold");
     $(card).on("taphold", function(event){
       card_flag_cb(game, i);
     });
-    $(card).off("taphold");
-    
+
     grid.appendChild(card);
   }
 }
