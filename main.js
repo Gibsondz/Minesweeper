@@ -27,6 +27,8 @@ function prepare_dom(game) {
     $(card).on("taphold", function(event){
       card_flag_cb(game, i);
     });
+    $(card).off("taphold");
+    
     grid.appendChild(card);
   }
 }
