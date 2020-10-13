@@ -1,7 +1,6 @@
 window.addEventListener('load', main);
 
 let timer;
-$.event.special.tap.emitTapOnTaphold = false;
 
 
 /**
@@ -24,11 +23,6 @@ function prepare_dom(game) {
     card.addEventListener("contextmenu", (event) => {
       card_flag_cb(game, i);
       event.preventDefault();
-    });
-
-    $(card).off("taphold");
-    $(card).on("taphold", function(event){
-      card_flag_cb(game, i);
     });
 
     grid.appendChild(card);

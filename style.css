@@ -4,7 +4,7 @@
   }
   
   body {
-    background: rgb(255, 237, 179);
+    background: peachpuff;
   }
   
   .card {
@@ -42,7 +42,7 @@
   }
 
   .card.flag {
-    background-color: blue;
+    background-image: url('flag.png');
     opacity: 1;
     transform: rotateY(0deg);
   }
